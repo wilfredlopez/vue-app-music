@@ -1,12 +1,12 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <AppHeader />
+  <router-view />
 </template>
 
 <style lang="scss">
+body {
+  margin: 0;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -28,3 +28,17 @@
   }
 }
 </style>
+
+
+<script lang="ts">
+import { defineComponent } from "vue";
+import AppHeader from "@/components/AppHeader.vue"; // @ is an alias to /src
+
+export default defineComponent({
+  name: "App",
+  components: {
+    AppHeader,
+  },
+});
+</script>
+
